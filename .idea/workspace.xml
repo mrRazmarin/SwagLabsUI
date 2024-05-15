@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/HelpersMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/HelpersMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthCorrectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthCorrectSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/SelenideConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/SelenideConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +36,7 @@
   "keyToString": {
     "Gradle.AuthTests.checkCorrectAuth.executor": "Run",
     "Gradle.AuthTests.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
@@ -129,12 +127,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715796395682</updated>
-      <workItem from="1715796396739" duration="4078000" />
+      <workItem from="1715796396739" duration="4624000" />
     </task>
+    <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
+      <option name="closed" value="true" />
+      <created>1715800576549</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715800576549</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="изменил тест, сделал проверку на авторизацию нескольких логинов" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменил тест, сделал проверку на авторизацию нескольких логинов" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

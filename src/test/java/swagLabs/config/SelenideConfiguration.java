@@ -12,6 +12,7 @@ public class SelenideConfiguration implements BeforeAllCallback, BeforeEachCallb
     public void beforeAll(ExtensionContext extensionContext) {
         Configuration.baseUrl = "https://www.saucedemo.com/";
         Configuration.browser = "chrome";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @Override

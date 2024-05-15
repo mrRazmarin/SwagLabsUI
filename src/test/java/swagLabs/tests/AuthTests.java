@@ -22,10 +22,12 @@ public class AuthTests{
     /***
      * Check auth on site with all logins
      * Steps:
-     * 1. Input login(loop);
+     * 1. Input login;
      * 2. Input password;
      * 3. Click 'Login';
-     * 4. Retry from 1 on 3 steps with all
+     * 4. Click on sidebar;
+     * 5. Click on button 'Logout';
+     * 6. Retry from 1 on 5 steps with all logins
      ***/
     @Test
     @DisplayName("Проверка корректной авторизации всех пользователей")
