@@ -2,6 +2,7 @@ package swagLabs.helpers;
 
 import com.codeborne.selenide.Selenide;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -9,21 +10,16 @@ public class HelpersMethod {
     public static void sleepSelenide(int seconds){
         Selenide.sleep(TimeUnit.MILLISECONDS.convert(seconds, TimeUnit.SECONDS));
     }
-    private static String password = "secret_sauce";
+    private static final String password = "secret_sauce";
 
     public static String getPassword() {
         return password;
     }
 
-    private static Map<String, String> logins = Map.of(
-            "unlocked_user","standard_user",
-            "locked_user", "locked_out_user"
+    private static final List<String> logins = List.of(
+            "visual_user","standard_user"
     );
-    public static Map<String, String> getLogins(){
+    public static List<String> getLogins(){
         return logins;
-    }
-
-    public static String getLogin(String tagLogin){
-        return logins.get(tagLogin);
     }
 }
