@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="изменил тест, сделал проверку на авторизацию нескольких логинов">
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="дописал конфигурацию + добавил зависимость slf4l.simple">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/SelenideConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/SelenideConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthCorrectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +25,66 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2gVx9aoMuJ7FdX1iyWcd7iKuXjx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,9 +93,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.AuthTests.checkAuthWithAllLogins.executor": "Run",
     "Gradle.AuthTests.checkCorrectAuth.executor": "Run",
     "Gradle.AuthTests.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
+    "Gradle.SwagLabsUI [javadoc].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
@@ -55,7 +116,7 @@
       <recent name="C:\Users\salni\IdeaProjects\SwagLabsUI\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AuthTests.checkCorrectAuth">
+  <component name="RunManager" selected="Gradle.AuthTests">
     <configuration name="AuthTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -70,6 +131,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;swagLabs.tests.AuthTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthTests.checkAuthWithAllLogins" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;swagLabs.tests.AuthTests.checkAuthWithAllLogins&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -104,10 +189,34 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SwagLabsUI [javadoc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="javadoc" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AuthTests.checkCorrectAuth" />
         <item itemvalue="Gradle.AuthTests" />
+        <item itemvalue="Gradle.AuthTests.checkAuthWithAllLogins" />
+        <item itemvalue="Gradle.AuthTests.checkCorrectAuth" />
+        <item itemvalue="Gradle.SwagLabsUI [javadoc]" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +236,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715796395682</updated>
-      <workItem from="1715796396739" duration="4624000" />
+      <workItem from="1715796396739" duration="4778000" />
+      <workItem from="1715873445576" duration="8405000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -137,15 +247,35 @@
       <option name="project" value="LOCAL" />
       <updated>1715800576549</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="дописал конфигурацию + добавил зависимость slf4l.simple">
+      <option name="closed" value="true" />
+      <created>1715801213958</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715801213958</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="изменил тест, сделал проверку на авторизацию нескольких логинов" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменил тест, сделал проверку на авторизацию нескольких логинов" />
+    <MESSAGE value="дописал конфигурацию + добавил зависимость slf4l.simple" />
+    <option name="LAST_COMMIT_MESSAGE" value="дописал конфигурацию + добавил зависимость slf4l.simple" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,14 +2,13 @@ package swagLabs.steps;
 
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
-import swagLabs.helpers.HelpersMethod;
 import swagLabs.pages.AuthPage;
 import swagLabs.pages.ShopPage;
 
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
-public class AuthCorrectSteps {
+public class AuthSteps {
     private final AuthPage authPage = new AuthPage();
     private final ShopPage shopPage = new ShopPage();
 
@@ -39,7 +38,7 @@ public class AuthCorrectSteps {
     }
     @Step("Проверка редиректа после авторизации")
     public void checkRedirectOnShopPage(String redirectLink){
-        HelpersMethod.sleepSelenide(5);
+        //HelpersMethod.sleepSelenide(5);
         webdriver().shouldHave(url(redirectLink));
     }
     @Step

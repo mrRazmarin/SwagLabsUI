@@ -7,17 +7,17 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import swagLabs.config.SelenideConfiguration;
 import swagLabs.helpers.HelpersMethod;
-import swagLabs.steps.AuthCorrectSteps;
+import swagLabs.steps.AuthSteps;
 
 import java.util.List;
 
 @ExtendWith(SelenideConfiguration.class)
-@DisplayName("Тесты авторизации")
-public class AuthTests{
+@DisplayName("Tests authorizations")
+public class AuthTests {
     private final String password = HelpersMethod.getPassword();
     private final List<String> logins = HelpersMethod.getLogins();
     private final String urlOnPageShop = "https://www.saucedemo.com/inventory.html";
-    AuthCorrectSteps authCorrectSteps = new AuthCorrectSteps();
+    AuthSteps authCorrectSteps = new AuthSteps();
 
     /***
      * Check auth on site with all logins
@@ -30,15 +30,15 @@ public class AuthTests{
      * 6. Retry from 1 on 5 steps with all logins
      ***/
     @Test
-    @DisplayName("Проверка корректной авторизации всех пользователей")
+    @DisplayName("Checker correct authorization multiple users")
     @Epic("UI")
     @Story("Authentication")
     @Severity(SeverityLevel.NORMAL)
     @Owner("Mikhail Salnikov")
     @Issue("AUTH-all")
-    public void checkCorrectAuth(){
+    public void checkAuthWithAllLogins() {
         int countLogins = logins.size();
-        while(countLogins > 0){
+        while (countLogins > 0) {
             authCorrectSteps.inputLogin(logins.get(countLogins - 1));
             authCorrectSteps.inputPassword(password);
             authCorrectSteps.clickLoginButton();
@@ -47,5 +47,23 @@ public class AuthTests{
             countLogins--;
             System.out.println("Count logins: " + countLogins);
         }
+    }
+
+    @Test
+    @DisplayName("Checker correct authorization 'standard' user")
+    @Epic("UI")
+    @Story("Authentication")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Mikhail Salnikov")
+    @Issue("AUTH-standardUser")
+    void checkCorrectAuth() {
+        authCorrectSteps.inputLogin(logins.stream()
+                .filter(x -> x.equals("standard_user"))
+                .findFirst()
+                .get()
+        );
+        authCorrectSteps.inputPassword(password);
+        authCorrectSteps.clickLoginButton();
+        authCorrectSteps.checkRedirectOnShopPage(urlOnPageShop);
     }
 }
