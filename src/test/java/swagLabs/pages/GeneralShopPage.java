@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class ShopPage {
+public class GeneralShopPage {
     public SelenideElement sideBarElement(){
         return $("#react-burger-menu-btn")
                 .as("Левое меню страницы");
@@ -14,7 +14,7 @@ public class ShopPage {
         return $("#logout_sidebar_link").as("Кнопка \'logout\'");
     }
     public ElementsCollection addToCartButton(){
-        return $$x("//button[contains(@id, \"add-to-cart-sauce-labs\")]")
+        return $$x("//button[contains(@id, \"add-to-cart\")]")
                 .as("Коллекция кнопок 'Add to cart'");
     }
     public SelenideElement cartButton(){
@@ -33,8 +33,12 @@ public class ShopPage {
         return $$x("//div[@class = \"inventory_item_desc\"]")
                 .as("Описание товаров");
     }
-    public ElementsCollection nameAndDescriptionItems(){
-        return $$x("//div[@class = \"inventory_item_label\"]")
-                .as("Наименование и описание товаров");
+    public ElementsCollection fullBlockOnceProduct(){
+        return $$x("//div[@class = \"inventory_item_description\"]")
+                .as("Блок с информацией о товаре");
+    }
+    public ElementsCollection itemsInCart(){
+        return $$x("//div[@class = \"inventory_item_name\"]")
+                .as("Продукты в корзине");
     }
 }
