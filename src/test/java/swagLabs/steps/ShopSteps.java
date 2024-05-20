@@ -1,6 +1,5 @@
 package swagLabs.steps;
 
-import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 import swagLabs.pages.GeneralShopPage;
 
@@ -9,11 +8,12 @@ import java.util.List;
 import static com.codeborne.selenide.Condition.*;
 
 public class ShopSteps {
-    private GeneralShopPage shopPage = new GeneralShopPage();
+    private final GeneralShopPage shopPage = new GeneralShopPage();
 
     @Step
     //Добавление продукта в корзину
     public void addSingleProductToCart(String productName) {
+        //noinspection ResultOfMethodCallIgnored
         shopPage.fullBlockOnceProduct()
                 .filter(cssClass("inventory_item_name"))
                 .findBy(exactText(productName));

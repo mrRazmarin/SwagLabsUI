@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="немного описал страницу товаров + подправил конфиг build.gradle">
-      <change afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/SelenideConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/AuthConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/HelpersMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/GeneralShopPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="описал часть шагов для тестирования товаров" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -270,7 +260,7 @@
       <workItem from="1716015288996" duration="7789000" />
       <workItem from="1716034679010" duration="5219000" />
       <workItem from="1716216763142" duration="1131000" />
-      <workItem from="1716224141949" duration="5132000" />
+      <workItem from="1716224141949" duration="5452000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -296,7 +286,55 @@
       <option name="project" value="LOCAL" />
       <updated>1715883340152</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="зарефакторил конфигурацию для авторизации и добавил конфигурацию для страницы товаров">
+      <option name="closed" value="true" />
+      <created>1716230466639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230466639</updated>
+    </task>
+    <task id="LOCAL-00005" summary="зарефакторил шаги и тесты для страницы авторизации">
+      <option name="closed" value="true" />
+      <created>1716230497095</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230497095</updated>
+    </task>
+    <task id="LOCAL-00006" summary="немного зарефакторил исходный класс для выборки данных">
+      <option name="closed" value="true" />
+      <created>1716230520043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230520043</updated>
+    </task>
+    <task id="LOCAL-00007" summary="описал часть страниц по товарам и корзины">
+      <option name="closed" value="true" />
+      <created>1716230551494</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230551494</updated>
+    </task>
+    <task id="LOCAL-00008" summary="добавил тест + 1 заготовку для теста">
+      <option name="closed" value="true" />
+      <created>1716230576168</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230576168</updated>
+    </task>
+    <task id="LOCAL-00009" summary="описал часть шагов для тестирования товаров">
+      <option name="closed" value="true" />
+      <created>1716230592482</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230592482</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +355,13 @@
     <MESSAGE value="изменил тест, сделал проверку на авторизацию нескольких логинов" />
     <MESSAGE value="дописал конфигурацию + добавил зависимость slf4l.simple" />
     <MESSAGE value="немного описал страницу товаров + подправил конфиг build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="немного описал страницу товаров + подправил конфиг build.gradle" />
+    <MESSAGE value="зарефакторил конфигурацию для авторизации и добавил конфигурацию для страницы товаров" />
+    <MESSAGE value="зарефакторил шаги и тесты для страницы авторизации" />
+    <MESSAGE value="немного зарефакторил исходный класс для выборки данных" />
+    <MESSAGE value="описал часть страниц по товарам и корзины" />
+    <MESSAGE value="добавил тест + 1 заготовку для теста" />
+    <MESSAGE value="описал часть шагов для тестирования товаров" />
+    <option name="LAST_COMMIT_MESSAGE" value="описал часть шагов для тестирования товаров" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
