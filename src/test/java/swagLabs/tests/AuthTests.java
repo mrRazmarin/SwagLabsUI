@@ -5,17 +5,17 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import swagLabs.config.SelenideConfiguration;
-import swagLabs.helpers.HelpersMethod;
+import swagLabs.config.AuthConfiguration;
+import swagLabs.helpers.DataForTests;
 import swagLabs.steps.AuthSteps;
 
 import java.util.List;
 
-@ExtendWith(SelenideConfiguration.class)
+@ExtendWith(AuthConfiguration.class)
 @DisplayName("Tests authorizations")
 public class AuthTests {
-    private final String password = HelpersMethod.getPassword();
-    private final List<String> logins = HelpersMethod.getLogins();
+    private final String password = DataForTests.getPassword();
+    private final List<String> logins = DataForTests.getLogins();
     private final String urlOnPageShop = "https://www.saucedemo.com/inventory.html";
     AuthSteps authCorrectSteps = new AuthSteps();
 
