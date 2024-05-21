@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="описал часть шагов для тестирования товаров" />
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="добавил игнор для &quot;желтого&quot; кода">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +60,12 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -88,7 +103,10 @@
     "Gradle.AuthTests.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.ShopTests.addItemToCart.executor": "Debug",
+    "Gradle.ShopTests.addMultipleItem.executor": "Debug",
+    "Gradle.ShopTests.addOnceItemToCart.executor": "Run",
     "Gradle.ShopTests.executor": "Run",
+    "Gradle.SwagLabsUI [allureReport].executor": "Run",
     "Gradle.SwagLabsUI [javadoc].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -108,79 +126,7 @@
       <recent name="C:\Users\salni\IdeaProjects\SwagLabsUI\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ShopTests.addItemToCart">
-    <configuration name="AuthTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;swagLabs.tests.AuthTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthTests.checkAuthWithAllLogins" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;swagLabs.tests.AuthTests.checkAuthWithAllLogins&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthTests.checkCorrectAuth" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;swagLabs.tests.AuthTests.checkCorrectAuth&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.ShopTests.addMultipleItem">
     <configuration name="ShopTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -229,13 +175,83 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ShopTests.addMultipleItem" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;swagLabs.tests.ShopTests.addMultipleItem&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ShopTests.addOnceItemToCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;swagLabs.tests.ShopTests.addOnceItemToCart&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SwagLabsUI [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="allureReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ShopTests.addMultipleItem" />
+        <item itemvalue="Gradle.SwagLabsUI [allureReport]" />
+        <item itemvalue="Gradle.ShopTests.addOnceItemToCart" />
         <item itemvalue="Gradle.ShopTests.addItemToCart" />
         <item itemvalue="Gradle.ShopTests" />
-        <item itemvalue="Gradle.AuthTests" />
-        <item itemvalue="Gradle.AuthTests.checkAuthWithAllLogins" />
-        <item itemvalue="Gradle.AuthTests.checkCorrectAuth" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +276,8 @@
       <workItem from="1716015288996" duration="7789000" />
       <workItem from="1716034679010" duration="5219000" />
       <workItem from="1716216763142" duration="1131000" />
-      <workItem from="1716224141949" duration="5452000" />
+      <workItem from="1716224141949" duration="5833000" />
+      <workItem from="1716300397955" duration="10087000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -334,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716230592482</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="добавил игнор для &quot;желтого&quot; кода">
+      <option name="closed" value="true" />
+      <created>1716230894469</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716230894469</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +386,23 @@
     <MESSAGE value="описал часть страниц по товарам и корзины" />
     <MESSAGE value="добавил тест + 1 заготовку для теста" />
     <MESSAGE value="описал часть шагов для тестирования товаров" />
-    <option name="LAST_COMMIT_MESSAGE" value="описал часть шагов для тестирования товаров" />
+    <MESSAGE value="добавил игнор для &quot;желтого&quot; кода" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил игнор для &quot;желтого&quot; кода" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide-core/7.3.1/a610a84764ad35b8751cb96371bc2b298cb0b0a0/selenide-core-7.3.1-sources.jar!/com/codeborne/selenide/BaseElementsCollection.java</url>
+          <line>286</line>
+          <properties class="com.codeborne.selenide.BaseElementsCollection" method="find">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
