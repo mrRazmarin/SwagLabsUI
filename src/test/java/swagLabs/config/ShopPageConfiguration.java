@@ -40,7 +40,7 @@ public class ShopPageConfiguration implements BeforeAllCallback,
     }
 
     @Override
-    public void afterEach(ExtensionContext extensionContext) throws Exception {
+    public synchronized void afterEach(ExtensionContext extensionContext) throws Exception {
         WebDriverRunner.closeWebDriver();
     }
 }
