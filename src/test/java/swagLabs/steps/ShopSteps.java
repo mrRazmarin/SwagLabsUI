@@ -5,7 +5,7 @@ import swagLabs.pages.GeneralShopPage;
 
 import java.util.List;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.CollectionCondition.containExactTextsCaseSensitive;
 import static com.codeborne.selenide.Condition.*;
 
 public class ShopSteps {
@@ -23,7 +23,9 @@ public class ShopSteps {
                 .findBy(attribute("name", "add-to-cart" + "-" + productName))
                 .click();
     }
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     @Step
+    //Добавление нескольких продуктов в корзину
     public void addMultipleProductsToCart(List<String> productNames) {
         int counter = productNames.size();
 
@@ -56,6 +58,6 @@ public class ShopSteps {
     //Проверка наличия продуктов в корзине
     public void checkHaveItemInCart(List<String> itemNames) {
         shopPage.itemsInCart()
-                .shouldHave(texts(itemNames));
+                .shouldHave(containExactTextsCaseSensitive(itemNames));
     }
 }

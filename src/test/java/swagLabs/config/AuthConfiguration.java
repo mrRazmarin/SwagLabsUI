@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class AuthConfiguration implements BeforeAllCallback, BeforeEachCallback, AfterEachCallback {
     @Override
     public void beforeAll(ExtensionContext extensionContext) {
-        Configuration.baseUrl = DataForTests.getUrlAuth();
+        Configuration.baseUrl = new DataForTests().getUrlAuth();
         Configuration.browser = "chrome";
         Configuration.pageLoadStrategy = "eager";
         Configuration.reportsFolder = "src/test/resources/screenshots";

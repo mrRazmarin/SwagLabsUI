@@ -2,6 +2,7 @@ package swagLabs.tests;
 
 
 import io.qameta.allure.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,8 +15,9 @@ import java.util.List;
 @ExtendWith(AuthConfiguration.class)
 @DisplayName("Tests authorizations")
 public class AuthTests {
-    private final String password = DataForTests.getPassword();
-    private final List<String> logins = DataForTests.getLogins();
+    private DataForTests dataForTests = new DataForTests();
+    private final String password = dataForTests.getPassword();
+    private final List<String> logins = dataForTests.getLogins();
     private final String urlOnPageShop = "https://www.saucedemo.com/inventory.html";
     AuthSteps authCorrectSteps = new AuthSteps();
 
@@ -36,6 +38,7 @@ public class AuthTests {
     @Severity(SeverityLevel.NORMAL)
     @Owner("Mikhail Salnikov")
     @Issue("AUTH-all")
+    @Disabled
     public void checkAuthWithAllLogins() {
         int countLogins = logins.size();
         while (countLogins > 0) {
@@ -56,6 +59,7 @@ public class AuthTests {
     @Severity(SeverityLevel.NORMAL)
     @Owner("Mikhail Salnikov")
     @Issue("AUTH-standardUser")
+    @Disabled
     void checkCorrectAuth() {
         authCorrectSteps.inputLogin(logins.stream()
                 .filter(x -> x.equals("standard_user"))

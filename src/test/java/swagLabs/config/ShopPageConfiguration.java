@@ -18,8 +18,8 @@ public class ShopPageConfiguration implements BeforeAllCallback,
         AfterEachCallback {
 
     @Override
-    public void beforeAll(ExtensionContext extensionContext) throws Exception {
-        Configuration.baseUrl = DataForTests.getUrlShop();
+    public void beforeAll(ExtensionContext extensionContext){
+        Configuration.baseUrl = new DataForTests().getUrlShop();
         Configuration.browser = "chrome";
         Configuration.pageLoadStrategy = "eager";
         Configuration.reportsFolder = "src/test/resources/screenshots";
@@ -27,20 +27,22 @@ public class ShopPageConfiguration implements BeforeAllCallback,
     }
 
     @Override
-    public void beforeEach(ExtensionContext extensionContext) throws Exception {
+    public void beforeEach(ExtensionContext extensionContext) {
+        DataForTests data = new DataForTests();
         Cookie cookie = new Cookie("session-username",
                 "standard_user" ,
                 "www.saucedemo.com",
                 "/",
-                DataForTests.getExpiresDateForCookie());
-        Selenide.open(DataForTests.getUrlAuth());
+                data.getExpiresDateForCookie());
+
+        Selenide.open(data.getUrlAuth());
         WebDriverRunner.getWebDriver().manage().window().maximize();
         WebDriverRunner.getWebDriver().manage().addCookie(cookie);
         open(baseUrl);
     }
 
     @Override
-    public synchronized void afterEach(ExtensionContext extensionContext) throws Exception {
+    public synchronized void afterEach(ExtensionContext extensionContext) {
         WebDriverRunner.closeWebDriver();
     }
 }

@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="добавил игнор для &quot;желтого&quot; кода">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="добавил и переписал содержимое">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/AuthConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/AuthConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +41,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SwagLabsUI" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="documentation" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -103,11 +85,12 @@
     "Gradle.AuthTests.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.ShopTests.addItemToCart.executor": "Debug",
-    "Gradle.ShopTests.addMultipleItem.executor": "Debug",
+    "Gradle.ShopTests.addMultipleItem.executor": "Run",
     "Gradle.ShopTests.addOnceItemToCart.executor": "Run",
     "Gradle.ShopTests.executor": "Run",
     "Gradle.SwagLabsUI [allureReport].executor": "Run",
     "Gradle.SwagLabsUI [javadoc].executor": "Run",
+    "Gradle.SwagLabsUI [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true",
@@ -126,7 +109,7 @@
       <recent name="C:\Users\salni\IdeaProjects\SwagLabsUI\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ShopTests.addMultipleItem">
+  <component name="RunManager" selected="Gradle.SwagLabsUI [test]">
     <configuration name="ShopTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,30 +124,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;swagLabs.tests.ShopTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ShopTests.addItemToCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;swagLabs.tests.ShopTests.addItemToCart&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,13 +204,35 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SwagLabsUI [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SwagLabsUI [test]" />
         <item itemvalue="Gradle.ShopTests.addMultipleItem" />
+        <item itemvalue="Gradle.ShopTests" />
         <item itemvalue="Gradle.SwagLabsUI [allureReport]" />
         <item itemvalue="Gradle.ShopTests.addOnceItemToCart" />
-        <item itemvalue="Gradle.ShopTests.addItemToCart" />
-        <item itemvalue="Gradle.ShopTests" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +258,9 @@
       <workItem from="1716034679010" duration="5219000" />
       <workItem from="1716216763142" duration="1131000" />
       <workItem from="1716224141949" duration="5833000" />
-      <workItem from="1716300397955" duration="10087000" />
+      <workItem from="1716300397955" duration="10231000" />
+      <workItem from="1716394518810" duration="1265000" />
+      <workItem from="1716399915775" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -359,7 +342,39 @@
       <option name="project" value="LOCAL" />
       <updated>1716230894469</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="переписал на параметризированные тесты">
+      <option name="closed" value="true" />
+      <created>1716315189684</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716315189684</updated>
+    </task>
+    <task id="LOCAL-00012" summary="переписал конфигурацию">
+      <option name="closed" value="true" />
+      <created>1716315213919</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716315213919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="переписал код для доступа к данным дла тестов">
+      <option name="closed" value="true" />
+      <created>1716315223197</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716315223197</updated>
+    </task>
+    <task id="LOCAL-00014" summary="добавил и переписал содержимое">
+      <option name="closed" value="true" />
+      <created>1716315236621</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716315236621</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +402,11 @@
     <MESSAGE value="добавил тест + 1 заготовку для теста" />
     <MESSAGE value="описал часть шагов для тестирования товаров" />
     <MESSAGE value="добавил игнор для &quot;желтого&quot; кода" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил игнор для &quot;желтого&quot; кода" />
+    <MESSAGE value="переписал на параметризированные тесты" />
+    <MESSAGE value="переписал конфигурацию" />
+    <MESSAGE value="переписал код для доступа к данным дла тестов" />
+    <MESSAGE value="добавил и переписал содержимое" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил и переписал содержимое" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,6 +419,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

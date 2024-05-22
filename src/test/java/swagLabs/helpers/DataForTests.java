@@ -8,27 +8,26 @@ import java.util.stream.Stream;
 
 public class DataForTests {
     private static final String password = "secret_sauce";
-    public static String getPassword() {
+    public final String getPassword() {
         return password;
     }
-    private static final String urlShopPage = "https://www.saucedemo.com/inventory.html";
-    private static final String urlAuthPage = "https://www.saucedemo.com";
-    private final String nameSingleItem = "Sauce Labs Backpack";
-    private  static  final List<String> logins = List.of(
+    private final String urlShopPage = "https://www.saucedemo.com/inventory.html";
+    private final String urlAuthPage = "https://www.saucedemo.com";
+    private final List<String> logins = List.of(
             "visual_user","standard_user"
     );
-    private static final List<String> items = List.of(
+    private final List<String> items = List.of(
             "Sauce Labs Backpack",
             "Sauce Labs Bike Light",
             "Sauce Labs Bolt T-Shirt",
             "Sauce Labs Fleece Jacket",
             "Sauce Labs Onesie"
     );
-    public static List<String> getItems(){
+    public List<String> getItems(){
         return items;
     }
 
-    public static final Stream<Arguments> getNamesItems() {
+    public static Stream<Arguments> getNamesItems() {
         return Stream.of(
                 Arguments.of("Sauce Labs Backpack"),
                 Arguments.of("Sauce Labs Bike Light"),
@@ -37,22 +36,18 @@ public class DataForTests {
                 Arguments.of("Sauce Labs Onesie")
         );
     }
-    public static String getUrlShop() {
+    public String getUrlShop() {
         return urlShopPage;
     }
-    public static String getUrlAuth() {
+    public String getUrlAuth() {
         return urlAuthPage;
     }
-    public static List<String> getLogins(){
+    public List<String> getLogins(){
         return logins;
     }
-    public static Date getExpiresDateForCookie(){
+    public Date getExpiresDateForCookie(){
         Date expires = new Date();
         expires.setTime(expires.getTime() + (10000 * 10000));
         return expires;
     }
-    public  String getNameSingleItem() {
-        return nameSingleItem;
-    }
-
 }

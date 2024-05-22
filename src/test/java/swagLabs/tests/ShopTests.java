@@ -23,7 +23,7 @@ public class ShopTests {
      * 4. Check have item.
      */
     @MethodSource("swagLabs.helpers.DataForTests#getNamesItems")
-    @ParameterizedTest(name = "Adding single item {0} and checking him in the cart")
+    @ParameterizedTest(name = "Adding single item '{0}' and checking him in the cart")
     @Epic("UI")
     @Story("ShopPage")
     @Severity(SeverityLevel.NORMAL)
@@ -37,7 +37,7 @@ public class ShopTests {
 
 
     @Test()
-    @DisplayName("Adding multiple items {0} and checking them in the cart")
+    @DisplayName("Adding multiple items and checking them in the cart")
     @Epic("UI")
     @Story("ShopPage")
     @Severity(SeverityLevel.NORMAL)
