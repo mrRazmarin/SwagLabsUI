@@ -38,7 +38,6 @@ public class AuthTests {
     @Severity(SeverityLevel.NORMAL)
     @Owner("Mikhail Salnikov")
     @Issue("AUTH-all")
-    @Disabled
     public void checkAuthWithAllLogins() {
         int countLogins = logins.size();
         while (countLogins > 0) {
@@ -59,7 +58,6 @@ public class AuthTests {
     @Severity(SeverityLevel.NORMAL)
     @Owner("Mikhail Salnikov")
     @Issue("AUTH-standardUser")
-    @Disabled
     void checkCorrectAuth() {
         authCorrectSteps.inputLogin(logins.stream()
                 .filter(x -> x.equals("standard_user"))

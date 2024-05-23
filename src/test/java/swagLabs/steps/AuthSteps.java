@@ -3,14 +3,14 @@ package swagLabs.steps;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import swagLabs.pages.AuthPage;
-import swagLabs.pages.GeneralShopPage;
+import swagLabs.pages.ShopPage;
 
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class AuthSteps {
     private final AuthPage authPage = new AuthPage();
-    private final GeneralShopPage shopPage = new GeneralShopPage();
+    private final ShopPage shopPage = new ShopPage();
 
     @Step("Input login")
     public void inputLogin(String login){

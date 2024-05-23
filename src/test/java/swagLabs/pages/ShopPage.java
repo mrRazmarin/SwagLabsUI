@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class GeneralShopPage {
+public class ShopPage {
     public SelenideElement sideBarElement(){
         return $("#react-burger-menu-btn")
                 .as("Левое меню страницы");
@@ -40,5 +40,9 @@ public class GeneralShopPage {
     public ElementsCollection itemsInCart(){
         return $$x("//div[@class = \"inventory_item_name\"]")
                 .as("Продукты в корзине");
+    }
+    public SelenideElement countAddItemsIcon(){
+        return $x("//span[@data-test = \"shopping-cart-badge\"]")
+                .as("Число на иконке корзины");
     }
 }

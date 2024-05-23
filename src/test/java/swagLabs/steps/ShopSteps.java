@@ -1,18 +1,21 @@
 package swagLabs.steps;
 
+import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
-import swagLabs.pages.GeneralShopPage;
+import org.junit.jupiter.api.Assertions;
+import swagLabs.pages.ShopPage;
 
 import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.containExactTextsCaseSensitive;
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class ShopSteps {
-    private final GeneralShopPage shopPage = new GeneralShopPage();
+    private final ShopPage shopPage = new ShopPage();
 
-    @Step
-    //Добавление продукта в корзину
+    @Step("Добавление продукта в корзину")
     public void addSingleProductToCart(String productName) {
         //noinspection ResultOfMethodCallIgnored
         shopPage.fullBlockOnceProduct()
@@ -24,8 +27,7 @@ public class ShopSteps {
                 .click();
     }
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    @Step
-    //Добавление нескольких продуктов в корзину
+    @Step("Добавление нескольких продуктов в корзину")
     public void addMultipleProductsToCart(List<String> productNames) {
         int counter = productNames.size();
 
@@ -33,31 +35,49 @@ public class ShopSteps {
             shopPage.fullBlockOnceProduct()
                     .filter(cssClass("inventory_item_name"))
                     .findBy(exactText(productNames.get(counter - 1)));
-            String productName = productNames.get(counter - 1)
-                    .replace(" ", "-")
-                    .toLowerCase();
+//            String productName = productNames.get(counter - 1)
+//                    .replace(" ", "-")
+//                    .toLowerCase();
+            String productName = new StringBuffer(productNames.get(counter - 1).replace(" ", "-"))
+                    .insert(0, "add-to-cart-")
+                    .toString().toLowerCase();
             shopPage.addToCartButton()
-                    .findBy(attribute("name", "add-to-cart" + "-" + productName))
+                    .findBy(attribute("name", productName))
                     .click();
             counter--;
         }
     }
-    @Step
-    //Открытие корзины
+    @Step("Открытие корзины")
     public void openCart() {
         shopPage.cartButton().click();
     }
-    @Step
-    //Проверка наличия продукта в корзине
+    @Step("Проверка наличия продукта в корзине")
     public void checkHaveItemInCart(String itemName) {
         shopPage.itemsInCart()
                 .findBy(attribute("class"))
                 .shouldHave(exactText(itemName));
     }
-    @Step
-    //Проверка наличия продуктов в корзине
+    @Step("Проверка наличия продуктов в корзине")
     public void checkHaveItemInCart(List<String> itemNames) {
         shopPage.itemsInCart()
                 .shouldHave(containExactTextsCaseSensitive(itemNames));
+    }
+    @Step("Проверка 1 ед. товара в корзине")
+    public void checkCountItemsInCart(Integer expectedCount){
+        Integer countInCart = Integer.parseInt(shopPage.countAddItemsIcon().getText());
+        Assertions.assertEquals(expectedCount, countInCart);
+    }
+    @Step("Удаление товара из корзины, из страницы с товарами")
+    //Нихуя не работает, нужно смотреть что не так, не может найти кнопку 'remove'
+    public void deleteItemFromShopPage(String nameProduct) {
+        String textAttributeFormat = new StringBuffer(nameProduct.replace(" ", "-").toLowerCase())
+                .insert(0, "remove-").toString();
+        shopPage.fullBlockOnceProduct()
+                .filter(cssClass("pricebar"))
+                .findBy(attribute("data-test", textAttributeFormat))
+                .shouldBe(visible)
+                .click();
+//                .findBy(attribute("data-test", textAttributeFormat))
+//                .click();
     }
 }

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="добавил и переписал содержимое">
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="убрал где смог статик поля">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/AuthConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/AuthConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/helpers/DataForTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/GeneralShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
@@ -87,6 +87,8 @@
     "Gradle.ShopTests.addItemToCart.executor": "Debug",
     "Gradle.ShopTests.addMultipleItem.executor": "Run",
     "Gradle.ShopTests.addOnceItemToCart.executor": "Run",
+    "Gradle.ShopTests.checkItemNameOnPageAndInCart.executor": "Run",
+    "Gradle.ShopTests.checkWorkingRemoveButton.executor": "Run",
     "Gradle.ShopTests.executor": "Run",
     "Gradle.SwagLabsUI [allureReport].executor": "Run",
     "Gradle.SwagLabsUI [javadoc].executor": "Run",
@@ -109,7 +111,7 @@
       <recent name="C:\Users\salni\IdeaProjects\SwagLabsUI\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SwagLabsUI [test]">
+  <component name="RunManager" selected="Gradle.ShopTests.checkWorkingRemoveButton">
     <configuration name="ShopTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -158,7 +160,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ShopTests.addOnceItemToCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ShopTests.checkItemNameOnPageAndInCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +173,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;swagLabs.tests.ShopTests.addOnceItemToCart&quot;" />
+            <option value="&quot;swagLabs.tests.ShopTests.checkItemNameOnPageAndInCart&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -182,26 +184,28 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SwagLabsUI [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ShopTests.checkWorkingRemoveButton" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureReport" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;swagLabs.tests.ShopTests.checkWorkingRemoveButton&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="SwagLabsUI [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -228,11 +232,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ShopTests.checkWorkingRemoveButton" />
+        <item itemvalue="Gradle.ShopTests.checkItemNameOnPageAndInCart" />
         <item itemvalue="Gradle.SwagLabsUI [test]" />
         <item itemvalue="Gradle.ShopTests.addMultipleItem" />
         <item itemvalue="Gradle.ShopTests" />
-        <item itemvalue="Gradle.SwagLabsUI [allureReport]" />
-        <item itemvalue="Gradle.ShopTests.addOnceItemToCart" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +264,8 @@
       <workItem from="1716224141949" duration="5833000" />
       <workItem from="1716300397955" duration="10231000" />
       <workItem from="1716394518810" duration="1265000" />
-      <workItem from="1716399915775" duration="4417000" />
+      <workItem from="1716399915775" duration="5288000" />
+      <workItem from="1716474494905" duration="10398000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -374,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716315236621</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="убрал где смог статик поля">
+      <option name="closed" value="true" />
+      <created>1716405149749</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716405149749</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +419,8 @@
     <MESSAGE value="переписал конфигурацию" />
     <MESSAGE value="переписал код для доступа к данным дла тестов" />
     <MESSAGE value="добавил и переписал содержимое" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил и переписал содержимое" />
+    <MESSAGE value="убрал где смог статик поля" />
+    <option name="LAST_COMMIT_MESSAGE" value="убрал где смог статик поля" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,11 +433,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
