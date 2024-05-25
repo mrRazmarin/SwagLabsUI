@@ -30,10 +30,24 @@ dependencies {
     testImplementation(platform("org.spockframework:spock-bom:2.3-groovy-4.0"))
     testImplementation("org.spockframework:spock-core")
 }
-
-test {
+tasks.withType(Test){
+    systemProperties(System.getProperties())
     useJUnitPlatform()
+
+    if(System.getProperty("threads") != null){
+        systemProperties += [
+                'junit.jupiter.execution.parallel.enabled':true,
+                'junit.jupiter.execution.parallel.mode.default' : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default' : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy':'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+        ]
+    }
+
     testLogging {
-        events "failed", "passed", "skipped", "standardError","standardOut"
+        lifecycle {
+            events "failed", "passed", "skipped", "standardError","standardOut"
+            exceptionFormat "short"
+        }
     }
 }
