@@ -1,9 +1,9 @@
 package swagLabs.steps;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.NotFoundException;
 import swagLabs.pages.ShopPage;
 
 import java.util.List;
@@ -64,20 +64,22 @@ public class ShopSteps {
     }
     @Step("Проверка 1 ед. товара в корзине")
     public void checkCountItemsInCart(Integer expectedCount){
-        Integer countInCart = Integer.parseInt(shopPage.countAddItemsIcon().getText());
+        SelenideElement countInCartElement = shopPage.countAddItemsIcon();
+        Integer countInCart;
+        if (countInCartElement == null){
+            countInCart = 0;
+        }else {
+            countInCart = Integer.parseInt(countInCartElement.getText());
+        }
         Assertions.assertEquals(expectedCount, countInCart);
     }
     @Step("Удаление товара из корзины, из страницы с товарами")
-    //Нихуя не работает, нужно смотреть что не так, не может найти кнопку 'remove'
     public void deleteItemFromShopPage(String nameProduct) {
         String textAttributeFormat = new StringBuffer(nameProduct.replace(" ", "-").toLowerCase())
                 .insert(0, "remove-").toString();
-        shopPage.fullBlockOnceProduct()
-                .filter(cssClass("pricebar"))
+        shopPage.removeFromCartButton()
                 .findBy(attribute("data-test", textAttributeFormat))
                 .shouldBe(visible)
                 .click();
-//                .findBy(attribute("data-test", textAttributeFormat))
-//                .click();
     }
 }

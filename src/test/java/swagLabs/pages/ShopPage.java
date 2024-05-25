@@ -3,6 +3,8 @@ package swagLabs.pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
+import java.util.NoSuchElementException;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class ShopPage {
@@ -42,7 +44,10 @@ public class ShopPage {
                 .as("Продукты в корзине");
     }
     public SelenideElement countAddItemsIcon(){
-        return $x("//span[@data-test = \"shopping-cart-badge\"]")
+        SelenideElement element = $x("//span[@data-test = \"shopping-cart-badge\"]")
                 .as("Число на иконке корзины");
+        if(element.isDisplayed()){
+            return element;
+        }else return null;
     }
 }

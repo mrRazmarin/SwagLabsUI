@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="убрал где смог статик поля">
+    <list default="true" id="0602ece5-62f1-4447-8a81-437e8cb530a9" name="Changes" comment="добавил 2 теста для страницы магазина, и поправил конфигурацию параллелизма">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/config/ShopPageConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/GeneralShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/AuthSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/pages/ShopPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/steps/ShopSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/AuthTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/swagLabs/tests/ShopTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/junit-platform.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +92,7 @@
     "Gradle.SwagLabsUI [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/salni/IdeaProjects/SwagLabsUI/src",
     "node.js.detected.package.eslint": "true",
@@ -265,7 +263,8 @@
       <workItem from="1716300397955" duration="10231000" />
       <workItem from="1716394518810" duration="1265000" />
       <workItem from="1716399915775" duration="5288000" />
-      <workItem from="1716474494905" duration="10398000" />
+      <workItem from="1716474494905" duration="10525000" />
+      <workItem from="1716641894023" duration="7227000" />
     </task>
     <task id="LOCAL-00001" summary="изменил тест, сделал проверку на авторизацию нескольких логинов">
       <option name="closed" value="true" />
@@ -387,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716405149749</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="добавил 2 теста для страницы магазина, и поправил конфигурацию параллелизма">
+      <option name="closed" value="true" />
+      <created>1716492421140</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716492421140</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +427,8 @@
     <MESSAGE value="переписал код для доступа к данным дла тестов" />
     <MESSAGE value="добавил и переписал содержимое" />
     <MESSAGE value="убрал где смог статик поля" />
-    <option name="LAST_COMMIT_MESSAGE" value="убрал где смог статик поля" />
+    <MESSAGE value="добавил 2 теста для страницы магазина, и поправил конфигурацию параллелизма" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил 2 теста для страницы магазина, и поправил конфигурацию параллелизма" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
